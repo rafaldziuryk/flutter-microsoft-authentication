@@ -143,7 +143,10 @@ class FlutterMicrosoftAuthenticationPlugin: MethodCallHandler {
     if (mSingleAccountApp == null) {
       result.error("MsalClientException", "Account not initialized", null)
     }
-
+    Log.w("TESTR", "mSingleAccountApp: ${mSingleAccountApp != null}"
+    Log.w("TESTR", "scopes: ${scopes != null}"
+    Log.w("TESTR", "authority: ${authority != null}"
+                      
     return mSingleAccountApp!!.acquireTokenSilentAsync(scopes, authority, getAuthSilentCallback(result))
   }
 
